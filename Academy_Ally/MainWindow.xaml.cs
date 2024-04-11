@@ -52,8 +52,15 @@ namespace Academy_Ally
 
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
         {
-            // Implement sign-up functionality (example: for demonstration purposes)
-            MessageBox.Show("Sign-up functionality not implemented yet.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+            Register register = new Register();
+            ChangePage(register);
+        }
+
+        public static void ChangePage(Page page)
+        {
+            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+            if (mainWindow != null)
+                mainWindow.Content = page;
         }
     }
 }
