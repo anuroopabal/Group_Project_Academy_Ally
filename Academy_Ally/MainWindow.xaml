@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Academy_Ally"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="750" Width="1200">
+    <Grid Height="434" VerticalAlignment="Bottom">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="424*" />
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="555*" />
+        </Grid.ColumnDefinitions>
 
+        <!-- Main Content Area -->
+        <StackPanel Grid.Column="0" Margin="30,-222,10,56" Grid.ColumnSpan="3" Height="600">
+            <Image Source="/logo.png" Height="500" Width="500"/>
+        </StackPanel>
+
+        <!-- Sign In Box -->
+        <Border Grid.Column="3" BorderBrush="#FF908E8E" BorderThickness="1" Margin="27,-257,48,20">
+            <StackPanel Margin="0,39,0,9" HorizontalAlignment="Center" Width="416" Height="569" VerticalAlignment="Top">
+                <TextBlock Text="Sign In" FontSize="24" FontWeight="Bold" Foreground="#FF908E8E"/>
+                <Label x:Name="Username" Content="Username:" Height="35" Foreground="#FF6C6B6B" Margin="0,40,48,0" FontSize="18"/>
+                <TextBox x:Name="txtUsername" Width="200" HorizontalAlignment="Left" Height="35" Background="White" OpacityMask="Black"/>
+                <Label x:Name="Password" Content="Password:" Foreground="#FF6C6B6B" FontSize="18" Margin="0,20,0,0"/>
+                <PasswordBox x:Name="txtPassword" Margin="0,0,0,10" Width="200" Height="35" HorizontalAlignment="Left"/>
+                <Button x:Name="SignIn" Content="SIGN IN" Click="SignInButton_Click" Width="145" Background="#FF43B8FA" Height="50" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" BorderBrush="#FF43B8FA" Margin="10,0,48,20" FontSize="30"/>
+                <Rectangle Height="5" Stroke="#FF6EC6F7" Width="404" Fill="#FF6EC6F7" Margin="-10,0,0,0"/>
+                <TextBlock x:Name="NewUser" Text="New user?" Foreground="#FF6C6B6B" Height="31" Margin="0,20,10,0" FontSize="18"/>
+                <Button x:Name="SignUp" Content="SIGN UP" Click="SignUpButton_Click" Background="#FF43B8FA" Width="145" Height="50" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" BorderBrush="#FF43B8FA" Margin="10,0,48,20" FontSize="30"/>
+            </StackPanel>
+        </Border>
+        <Rectangle HorizontalAlignment="Left" Height="5" Margin="58,-165,0,0" Stroke="#FF6EC6F7" VerticalAlignment="Top" Width="405" Grid.Column="3" Fill="#FF6EC6F7"/>
     </Grid>
 </Window>
