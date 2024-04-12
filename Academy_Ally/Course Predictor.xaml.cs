@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Academy_Ally
 {
     /// <summary>
-    /// Interaction logic for CoursePredictor.xaml
+    /// Interaction logic for Course_Predictor.xaml
     /// </summary>
-    public partial class CoursePredictor : Page
+    public partial class Course_Predictor : Page
     {
-        public CoursePredictor()
+        public Course_Predictor()
         {
             InitializeComponent();
         }
