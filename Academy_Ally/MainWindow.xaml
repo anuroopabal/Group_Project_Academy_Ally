@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Academy_Ally"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="1200">
+        Title="AcademyAlly" Height="750" Width="1200">
     <Grid Height="434" VerticalAlignment="Bottom">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="424*" />

@@ -37,7 +37,7 @@
                 <TextBox x:Name="txtAddress" Margin="0,0,0,10" Width="300" Height="35" HorizontalAlignment="Left"/>
                 <Label x:Name="Course" Content="Course ID:" Foreground="#FF6C6B6B" FontSize="18" Margin="0,6,0,0"/>
                 <TextBox x:Name="txtCourse" Margin="0,0,0,10" Width="300" Height="35" HorizontalAlignment="Left" />
-                <Button x:Name="SignUP" Content="Register" Click="SignInButton_Click" Width="160" Background="#FF43B8FA" Height="50" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" BorderBrush="#FF43B8FA" Margin="10,20,48,20" FontSize="30"/>
+                <Button x:Name="SignUP" Content="Register" Click="SignUpButton_Click" Width="160" Background="#FF43B8FA" Height="50" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" BorderBrush="#FF43B8FA" Margin="10,20,48,20" FontSize="30"/>
                 <Rectangle Height="5" Stroke="#FF6EC6F7" Width="404" Fill="#FF6EC6F7"/>
             </StackPanel>
         </Border>
