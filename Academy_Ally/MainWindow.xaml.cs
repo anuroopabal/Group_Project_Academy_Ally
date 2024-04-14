@@ -63,6 +63,7 @@ namespace Academy_Ally
             {
                 // Navigate to the next page or perform any other action
                 MessageBox.Show("Login successful.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                Content = new Cooppredictor();
             }
             else
             {
@@ -76,15 +77,14 @@ namespace Academy_Ally
 
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
         {
-            Register register = new Register();
-            ChangePage(register);
+            Content = new Register();
         }
 
-        public static void ChangePage(Page page)
-        {
-            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
-            if (mainWindow != null)
-                mainWindow.Content = page;
-        }
+        //public static void ChangePage(Page page)
+        //{
+        //    var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+        //    if (mainWindow != null)
+        //        mainWindow.Content = page;
+        //}
     }
 }
