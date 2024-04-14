@@ -6,39 +6,52 @@
       xmlns:local="clr-namespace:Academy_Ally"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CoursePredictor">
+      Title="Course_Predictor">
 
     <Grid Background="#FFF9F6F6">
         <TabControl>
-            <TabItem Header="Home" Margin="-2,-2,-29,0">
+            <TabItem Header="Home" Margin="-2,-2,-83,0">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="Course Predictor" Margin="29,-2,-111,0">
-                <Grid Background="#FFE5E5E5">
-                    <Label Content="Course Predictor" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.804,-3.871" Width="701" FontSize="20" HorizontalContentAlignment="Center" Background="#FF04DBF1" FontWeight="Bold"/>
-                    <Rectangle HorizontalAlignment="Left" Height="331" Margin="46,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="702" Grid.ColumnSpan="3"/>
-                    <Button Content="Button" HorizontalAlignment="Left" Margin="262,338,0,0" VerticalAlignment="Top" Width="119" Height="34" Background="#FF87E32B" Grid.Column="2"/>
-                    <TextBox HorizontalAlignment="Left" Height="18" Margin="63,119,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="259" Grid.ColumnSpan="2"/>
-                    <TextBox HorizontalAlignment="Left" Height="18" Margin="63,156,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="259" Grid.ColumnSpan="2"/>
-                    <TextBox HorizontalAlignment="Left" Height="18" Margin="63,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="259" Grid.ColumnSpan="2"/>
-                    <TextBox HorizontalAlignment="Left" Height="18" Margin="63,236,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="259" Grid.ColumnSpan="2"/>
-                    <TextBox HorizontalAlignment="Left" Height="18" Margin="63,273,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="259" Grid.ColumnSpan="2"/>
-                    <Label Content="Course Suggested :" HorizontalAlignment="Left" Height="25" Margin="63,311,0,0" VerticalAlignment="Top" Width="112" Background="#FFFAF7F7" FontWeight="Bold"/>
-                    <Label Content="SQATE&#xD;&#xA;Conestoga" HorizontalAlignment="Left" Height="44" Margin="47,52,0,0" VerticalAlignment="Top" Width="112" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <TabItem Header="Course Predictor" Margin="82,-2,-200,0">
+                <Grid>
+                    <Grid.Background>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="580*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Course Predictor" HorizontalAlignment="Left" Margin="13,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.804,-3.871" Width="1106" FontSize="20" HorizontalContentAlignment="Center" Background="#FF04DBF1" FontWeight="Bold" Grid.Column="1"/>
+                    <Rectangle HorizontalAlignment="Left" Height="458" Margin="12,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="1107" Grid.Column="1"/>
+                    <Button x:Name="Submit" Content="SUBMIT" Click="SubmitButton_Click" HorizontalAlignment="Left" Margin="547,440,0,0" VerticalAlignment="Top" Width="119" Height="34" Background="#FF76C329" Grid.Column="1"/>
+                    <TextBox x:Name="sub1" HorizontalAlignment="Left" Height="18" Margin="29,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" Grid.Column="1"/>
+                    <TextBox x:Name="sub2" HorizontalAlignment="Left" Height="18" Margin="29,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" Grid.Column="1"/>
+                    <TextBox x:Name="sub3" HorizontalAlignment="Left" Height="18" Margin="29,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" Grid.Column="1"/>
+                    <TextBox x:Name="sub4" HorizontalAlignment="Left" Height="18" Margin="29,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" Grid.Column="1"/>
+                    <TextBox x:Name="sub5" HorizontalAlignment="Left" Height="18" Margin="29,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" Grid.Column="1"/>
+                    <Label Content="Course Suggested :" HorizontalAlignment="Left" Height="30" Margin="29,442,0,0" VerticalAlignment="Top" Width="129" Background="#FFEEB84F" FontWeight="Bold" Grid.Column="1"/>
+                    <Label Content="SQATE - Conestoga" HorizontalAlignment="Left" Height="44" Margin="13,52,0,0" VerticalAlignment="Top" Width="1106" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Column="1" RenderTransformOrigin="0.458,0.452" FontSize="18" Background="#FF9FF0B0"/>
+                    <TextBox HorizontalAlignment="Left" Height="28" Margin="193,444,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="236" Grid.Column="1"/>
+                    <Label Grid.Column="1" Content="Subject 1" HorizontalAlignment="Left" Height="31" Margin="29,113,0,0" VerticalAlignment="Top" Width="147"/>
+                    <Label Grid.Column="1" Content="Subject 2" HorizontalAlignment="Left" Height="31" Margin="29,172,0,0" VerticalAlignment="Top" Width="147"/>
+                    <Label Grid.Column="1" Content="Subject 5" HorizontalAlignment="Left" Height="31" Margin="29,349,0,0" VerticalAlignment="Top" Width="147"/>
+                    <Label Grid.Column="1" Content="Subject 4" HorizontalAlignment="Left" Height="31" Margin="29,290,0,0" VerticalAlignment="Top" Width="147"/>
+                    <Label Grid.Column="1" Content="Subject 3" HorizontalAlignment="Left" Height="31" Margin="29,231,0,0" VerticalAlignment="Top" Width="147"/>
                 </Grid>
 
 
             </TabItem>
-            <TabItem Header="Help" Margin="0,-2,-93,0" HorizontalAlignment="Right" Width="74">
+            <TabItem Header="Help" Margin="0,-2,-195,0" HorizontalAlignment="Right" Width="200">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="FAQ" Margin="91,-2,-130,0">
+            <TabItem Header="FAQ" Margin="195,-2,-287,0">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="My Profile" Margin="125,-2,-187,0">
+            <TabItem Header="My Profile" Margin="287,-2,-393,0">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="Log Out" Margin="176,-2,-249,0">
+            <TabItem Header="Log Out" Margin="392,-2,-496,0">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
