@@ -23,6 +23,7 @@ namespace Academy_Ally
         public CoursePredictor()
         {
             InitializeComponent();
+            MessageBox.Show("Course Prediction successfull");
         }
     }
 }
