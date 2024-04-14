@@ -1,0 +1,30 @@
+﻿<Page x:Class="Academy_Ally.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Academy_Ally"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="1200"
+      Title="Register">
+
+    <Grid Height="610" VerticalAlignment="Top" Margin="0,140,0,0">
+        <Image HorizontalAlignment="Left" Height="106" Margin="111,185,0,0" VerticalAlignment="Top" Width="132" Source="/predictive-chart.png"/>
+        <Button x:Name="AcademicPredictor" Click="AcademicPredictor_Click" Content="Academic Predictors" HorizontalAlignment="Left" Height="52" Margin="56,322,0,0" VerticalAlignment="Top" Width="236" Background="#FF43B8FA" FontWeight="Bold" FontSize="24" Cursor="Arrow"/>
+        <Image HorizontalAlignment="Left" Height="106" Margin="996,185,0,0" VerticalAlignment="Top" Width="115" Source="/good-feedback.png"/>
+        <Button x:Name="CourseRating" Click="CourseRating_Click" Content="Course Rating" HorizontalAlignment="Left" Height="52" Margin="921,322,0,0" VerticalAlignment="Top" Width="236" Background="#FF43B8FA" FontWeight="Bold" FontSize="24" Cursor="Arrow"/>
+        <Image HorizontalAlignment="Left" Height="106" Margin="700,185,0,0" VerticalAlignment="Top" Width="115" Source="/calculator.png"/>
+        <Button x:Name="GradeCalculator" Click="GradeCalculator_Click" Content="Grade Calculator" HorizontalAlignment="Left" Height="52" Margin="635,322,0,0" VerticalAlignment="Top" Width="236" Background="#FF43B8FA" FontWeight="Bold" FontSize="24" Cursor="Arrow"/>
+        <Grid HorizontalAlignment="Center" Height="121" VerticalAlignment="Top" Width="1205">
+            <Image x:Name="UserProfile" HorizontalAlignment="Left" Height="74" Margin="1050,0,0,0" VerticalAlignment="Center" Width="77" Source="/user.png"/>
+            <Label Content="Welcome to AcedemicAlly!!" HorizontalAlignment="Left" Margin="263,0,0,0" VerticalAlignment="Center" Foreground="#FF43B8FA" FontSize="48" FontWeight="Bold"/>
+            <Label x:Name="dateDisplay" Loaded="DateTime_Loaded" HorizontalAlignment="Left" Margin="950,0,0,0" VerticalAlignment="Center"/>
+        </Grid>
+        <Image x:Name="CareerPreparation1" HorizontalAlignment="Left" Height="106" Margin="413,185,0,0" VerticalAlignment="Top" Width="132" Source="/career-path.png"/>
+        <Button x:Name="CareerPreparation" Click="CareerPreparation_Click" Content="Career Preparation" HorizontalAlignment="Left" Height="52" Margin="348,322,0,0" VerticalAlignment="Top" Width="236" Background="#FF43B8FA" FontWeight="Bold" FontSize="24" Cursor="Arrow"/>
+
+        <!-- Main Content Area -->
+
+        <!-- Sign In Box -->
+    </Grid>
+</Page>
