@@ -72,13 +72,19 @@ namespace Academy_Ally
                 // Set focus to username field
                 txtUsername.Focus();
             }
-            Content = new CoursePredictor();
+            
         }
 
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
         {
             Register register = new Register();
             Content = register;
+        }
+
+        private void CoursePredictor_Subject(object sender, RoutedEventArgs e)
+        {
+            CoursePredictor coursePredictor = new CoursePredictor();
+            Content =  coursePredictor;
         }
 
     }

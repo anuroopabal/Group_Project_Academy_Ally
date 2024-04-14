@@ -23,7 +23,22 @@ namespace Academy_Ally
         public CoursePredictor()
         {
             InitializeComponent();
-            MessageBox.Show("Course Prediction successfull");
+            
         }
+        private void CoursePredictor_Subject(object sender, RoutedEventArgs e)
+        {
+            string subject1 = sub1.Text;
+            string subject2 = sub2.Text;
+            string subject3 = sub3.Text;
+            string subject4 = sub4.Text;    
+            string subject5 = sub5.Text;
+
+
+
+
+        MessageBox.Show("Course Prediction successfull");
+
+        }
+
     }
 }
