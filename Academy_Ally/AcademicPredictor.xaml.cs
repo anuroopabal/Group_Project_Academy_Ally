@@ -16,20 +16,25 @@ using System.Windows.Shapes;
 namespace Academy_Ally
 {
     /// <summary>
-    /// Interaction logic for cooppredictor.xaml
+    /// Interaction logic for AcademicPredictor.xaml
     /// </summary>
-    public partial class Cooppredictor : Page
+    public partial class AcademicPredictor : Page
     {
-        public Cooppredictor()
+        public AcademicPredictor()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void RadioButton_Clicked(object sender, RoutedEventArgs e)
         {
-
-            //Register register = new Register();
-            //CoopFrame.NavigationService.Navigate(new Home());
+            if (CoopP.IsChecked == true)
+            {
+                PredictorFrame.NavigationService.Navigate(new Cooppredictor());
+            }
+            else
+            {
+                PredictorFrame.NavigationService.Navigate(new CoursePredictor());
+            }
         }
     }
 }

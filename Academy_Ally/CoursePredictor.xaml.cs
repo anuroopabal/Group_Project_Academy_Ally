@@ -40,5 +40,9 @@ namespace Academy_Ally
 
         }
 
+        private void SubmitButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

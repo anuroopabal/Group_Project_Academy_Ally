@@ -5,15 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Academy_Ally"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="750" d:DesignWidth="1200"
       Title="Course_Predictor">
 
     <Grid Background="#FFF9F6F6">
-        <TabControl>
+        <TabControl HorizontalContentAlignment="Center">
             <TabItem Header="Home" Margin="-2,-2,-83,0">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="Course Predictor" Margin="82,-2,-200,0">
+            <TabItem Header="Course Predictor" Margin="82,-2,-200,0" IsSelected="True">
                 <Grid>
                     <Grid.Background>
                         <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
@@ -23,7 +23,7 @@
                         <ColumnDefinition Width="580*"/>
                     </Grid.ColumnDefinitions>
                     <Label Content="Course Predictor" HorizontalAlignment="Left" Margin="13,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.804,-3.871" Width="1106" FontSize="20" HorizontalContentAlignment="Center" Background="#FF04DBF1" FontWeight="Bold" Grid.Column="1"/>
-                    <Rectangle HorizontalAlignment="Left" Height="458" Margin="12,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="1107" Grid.Column="1"/>
+                    <Rectangle HorizontalAlignment="Left" Height="628" Margin="12,52,0,0" Stroke="Black" VerticalAlignment="Top" Width="1107" Grid.Column="1"/>
                     <Button x:Name="Submit" Content="SUBMIT" Click="SubmitButton_Click" HorizontalAlignment="Left" Margin="547,440,0,0" VerticalAlignment="Top" Width="119" Height="34" Background="#FF76C329" Grid.Column="1"/>
                     <TextBox x:Name="sub1" HorizontalAlignment="Left" Height="18" Margin="29,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" Grid.Column="1"/>
                     <TextBox x:Name="sub2" HorizontalAlignment="Left" Height="18" Margin="29,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" Grid.Column="1"/>

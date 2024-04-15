@@ -52,14 +52,14 @@ namespace Academy_Ally
             // Insert user data into database
             try
             {
-                SqlConnection connection = new SqlConnection(@"Data Source=Rooz;Initial Catalog = AcademyAlly; Integrated Security = True; Trust Server Certificate=True");
+                /*SqlConnection connection = new SqlConnection(@"Data Source=Rooz;Initial Catalog = AcademyAlly; Integrated Security = True; Trust Server Certificate=True");
                 string insertQuery = $"INSERT INTO AcademyAlly.dbo.UserDetails(Email, Name, Password, Contact, Address, CourseID) VALUES ('{email}', '{name}', '{password}', '{contact}', '{address}', '{courseId}')";
                 SqlCommand cmd = new SqlCommand(insertQuery, connection);
                 DataTable dt = new DataTable();
                 connection.Open();
                 SqlDataReader sdr = cmd.ExecuteReader();
                 dt.Load(sdr);
-                connection.Close();
+                connection.Close();*/
                 MessageBox.Show("Registration successful.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
