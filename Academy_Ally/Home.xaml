@@ -9,19 +9,23 @@
       Title="Home">
 
     <Grid>
-        <Image HorizontalAlignment="Left" Height="106" Margin="111,185,0,0" VerticalAlignment="Top" Width="132" Source="/predictive-chart.png"/>
-        <Button x:Name="AcademicPredictor" Click="AcademicPredictor_Click" Content="Academic Predictors" HorizontalAlignment="Left" Height="52" Margin="56,322,0,0" VerticalAlignment="Top" Width="236" Background="#FF43B8FA" FontWeight="Bold" FontSize="24" Cursor="Arrow"/>
-        <Image HorizontalAlignment="Left" Height="106" Margin="996,185,0,0" VerticalAlignment="Top" Width="115" Source="/good-feedback.png"/>
-        <Button x:Name="CourseRating" Click="CourseRating_Click" Content="Course Rating" HorizontalAlignment="Left" Height="52" Margin="921,322,0,0" VerticalAlignment="Top" Width="236" Background="#FF43B8FA" FontWeight="Bold" FontSize="24" Cursor="Arrow"/>
-        <Image HorizontalAlignment="Left" Height="106" Margin="700,185,0,0" VerticalAlignment="Top" Width="115" Source="/calculator.png"/>
-        <Button x:Name="GradeCalculator" Click="GradeCalculator_Click" Content="Grade Calculator" HorizontalAlignment="Left" Height="52" Margin="635,322,0,0" VerticalAlignment="Top" Width="236" Background="#FF43B8FA" FontWeight="Bold" FontSize="24" Cursor="Arrow"/>
-        <Grid HorizontalAlignment="Center" Height="121" VerticalAlignment="Top" Width="1205">
-            <Image x:Name="UserProfile" HorizontalAlignment="Left" Height="74" Margin="1050,0,0,0" VerticalAlignment="Center" Width="77" Source="/user.png"/>
-            <Label Content="Welcome to AcedemicAlly!!" HorizontalAlignment="Left" Margin="263,0,0,0" VerticalAlignment="Center" Foreground="#FF43B8FA" FontSize="48" FontWeight="Bold"/>
-            <Label x:Name="dateDisplay" Loaded="DateTime_Loaded" HorizontalAlignment="Left" Margin="950,0,0,0" VerticalAlignment="Center"/>
+        <Image HorizontalAlignment="Left" Height="106" Margin="111,285,0,0" VerticalAlignment="Top" Width="132" Source="/predictive-chart.png"/>
+        <Button x:Name="AcademicPredictor" Click="AcademicPredictor_Click" Content="Academic Predictors" HorizontalAlignment="Left" Height="52" Margin="56,422,0,0" VerticalAlignment="Top" Width="236" Background="#FF43B8FA" FontWeight="Bold" FontSize="24" Cursor="Arrow"/>
+        <Image HorizontalAlignment="Left" Height="106" Margin="996,285,0,0" VerticalAlignment="Top" Width="115" Source="/good-feedback.png"/>
+        <Button x:Name="CourseRating" Click="CourseRating_Click" Content="Course Rating" HorizontalAlignment="Left" Height="52" Margin="921,422,0,0" VerticalAlignment="Top" Width="236" Background="#FF43B8FA" FontWeight="Bold" FontSize="24" Cursor="Arrow"/>
+        <Image HorizontalAlignment="Left" Height="106" Margin="700,285,0,0" VerticalAlignment="Top" Width="115" Source="/calculator.png"/>
+        <Button x:Name="GradeCalculator" Click="GradeCalculator_Click" Content="Grade Calculator" HorizontalAlignment="Left" Height="52" Margin="635,422,0,0" VerticalAlignment="Top" Width="236" Background="#FF43B8FA" FontWeight="Bold" FontSize="24" Cursor="Arrow"/>
+        <Grid HorizontalAlignment="Center" Height="221" VerticalAlignment="Top" Width="1205">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="952*"/>
+                <ColumnDefinition Width="253*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="UserProfile" HorizontalAlignment="Left" Height="74" Margin="98,0,0,100" VerticalAlignment="Center" Width="77" Source="/user.png" Grid.Column="1"/>
+            <Label Content="Welcome to AcedemicAlly!!" HorizontalAlignment="Left" Margin="263,100,0,0" VerticalAlignment="Center" Foreground="#FF43B8FA" FontSize="48" FontWeight="Bold"/>
+            <Label x:Name="dateDisplay" Loaded="DateTime_Loaded" HorizontalAlignment="Left" Margin="900,0,0,100" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
         </Grid>
-        <Image x:Name="CareerPreparation1" HorizontalAlignment="Left" Height="106" Margin="413,185,0,0" VerticalAlignment="Top" Width="132" Source="/career-path.png"/>
-        <Button x:Name="CareerPreparation" Click="CareerPreparation_Click" Content="Career Preparation" HorizontalAlignment="Left" Height="52" Margin="348,322,0,0" VerticalAlignment="Top" Width="236" Background="#FF43B8FA" FontWeight="Bold" FontSize="24" Cursor="Arrow"/>
+        <Image x:Name="CareerPreparation1" HorizontalAlignment="Left" Height="106" Margin="413,285,0,0" VerticalAlignment="Top" Width="132" Source="/career-path.png"/>
+        <Button x:Name="CareerPreparation" Click="CareerPreparation_Click" Content="Career Preparation" HorizontalAlignment="Left" Height="52" Margin="348,422,0,0" VerticalAlignment="Top" Width="236" Background="#FF43B8FA" FontWeight="Bold" FontSize="24" Cursor="Arrow"/>
 
         <!-- Main Content Area -->
 
