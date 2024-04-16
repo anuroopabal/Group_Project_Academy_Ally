@@ -25,7 +25,7 @@ namespace Academy_Ally
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
 
             //Register register = new Register();
