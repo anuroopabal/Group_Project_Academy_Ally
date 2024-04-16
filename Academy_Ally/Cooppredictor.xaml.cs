@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static Academy_Ally.Navigation;
 
 namespace Academy_Ally
 {
@@ -30,6 +31,13 @@ namespace Academy_Ally
 
             //Register register = new Register();
             //CoopFrame.NavigationService.Navigate(new Home());
+        }
+
+        private void TabSelection(object sender, SelectionChangedEventArgs e) 
+        {
+            string selectedTabItem = ((TabItem)e.AddedItems[0]).Header.ToString();
+            // Navigate using NavigationManager
+            Navigation.NavigateToPage(selectedTabItem, CoopFrame);
         }
     }
 }

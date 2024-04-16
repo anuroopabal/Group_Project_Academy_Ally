@@ -12,6 +12,7 @@
     <None Remove="calculator.png" />
     <None Remove="career-path.png" />
     <None Remove="good-feedback.png" />
+    <None Remove="help.jpg" />
     <None Remove="logo.png" />
     <None Remove="predictive-chart.png" />
     <None Remove="user.png" />
@@ -25,6 +26,7 @@
     <Resource Include="calculator.png" />
     <Resource Include="career-path.png" />
     <Resource Include="good-feedback.png" />
+    <Resource Include="help.jpg" />
     <Resource Include="logo.png" />
     <Resource Include="predictive-chart.png" />
     <Resource Include="user.png" />

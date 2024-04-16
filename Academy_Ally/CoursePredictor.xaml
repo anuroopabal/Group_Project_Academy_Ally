@@ -9,7 +9,7 @@
       Title="Course_Predictor">
 
     <Grid Background="#FFF9F6F6">
-        <TabControl HorizontalContentAlignment="Center">
+        <TabControl HorizontalContentAlignment="Center" SelectionChanged = "TabSelection">
             <TabItem Header="Home" Margin="-2,-2,-83,0">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
@@ -39,10 +39,24 @@
 
             </TabItem>
             <TabItem Header="Help" Margin="0,-2,-195,0" HorizontalAlignment="Right" Width="200">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="White">
+                    <Label x:Name="HelpHeading" Content="HELP" HorizontalAlignment="Center" Margin="0,36,0,0" VerticalAlignment="Top" FontSize="44" FontWeight="Bold" Width="219" HorizontalContentAlignment="Center" Height="66" FontFamily="Cooper Black"/>
+                    <TextBox HorizontalAlignment="Center" Margin="0,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1122" Text="Academy Ally is an academic assistance application designed to help students enhance their academic performance and career preparation. It offers various features such as Academic Predictors, Career Preparation tools, Grade calculator and Course Rating functionalities.&#xD;&#xA;&#xD;&#xA;Our offices are open from Monday to Saturday. Office remains closed on Sundays and other public holidays.&#xD;&#xA;&#xD;&#xA;AcademyAlly&#xD;&#xA;108 University Ave.East&#xD;&#xA;Waterloo,ON N2J 2W2&#xD;&#xA;Phone: 519-748-5220&#xD;&#xA;&#xD;&#xA;Contact Us:&#xD;&#xA;Email: servicedesk@academyally.com&#xD;&#xA;Phone: 519-748-5222&#xD;&#xA;&#xD;&#xA;Hours:&#xD;&#xA; 8 AM - 6 PM (Monday - Friday)&#xD;&#xA;10 AM - 4 PM (Saturday)&#xD;&#xA;Sunday Holiday&#xD;&#xA;&#xD;&#xA;Course Predictor page full setup.&#xD;&#xA;" Height="607" FontSize="18" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" IsReadOnly="True" Focusable="False"/>
+                    <Image Source="/help.jpg" HorizontalAlignment="Left" Height="393" Margin="83,253,0,0" VerticalAlignment="Top" Width="367"/>
+                </Grid>
             </TabItem>
             <TabItem Header="FAQ" Margin="195,-2,-287,0">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="White">
+                    <Label x:Name="FAQHeading" Content="FAQ" HorizontalAlignment="Center" Margin="0,36,0,0" VerticalAlignment="Top" FontSize="44" FontWeight="Bold" Width="219" HorizontalContentAlignment="Center" Height="66" FontFamily="Cooper Black"/>
+                    <TextBox HorizontalAlignment="Center" Margin="0,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1122" Text="* What are the Career Preparation features offered by Academy Ally?" Height="30" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" IsReadOnly="True"/>
+                    <TextBox HorizontalAlignment="Center" Margin="0,-30,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="1084" Text="Yes, Academy Ally allows students to calculate grades for the courses they are currently enrolled in. This feature enables students to track their academic progress and identify areas for improvement." Height="62" FontSize="18" BorderBrush="{x:Null}" FontStyle="Italic" IsReadOnly="True"/>
+                    <TextBox HorizontalAlignment="Center" Margin="0,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1122" Text="* Can Academy Ally calculate grades for enrolled courses?" Height="30" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" IsReadOnly="True"/>
+                    <TextBox HorizontalAlignment="Center" Margin="0,520,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1122" Text="* Are the predictions provided by Academy Ally guaranteed to be accurate? " Height="30" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" IsReadOnly="True"/>
+                    <TextBox HorizontalAlignment="Center" Margin="0,435,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1084" Text="The accuracy of the predictions provided by the Co-Op Predictor depends on various factors such as the student's academic performance, industry demands, and program requirements. While the predictor offers valuable insights, it's important to note that outcomes may vary." Height="62" FontSize="18" BorderBrush="{x:Null}" FontStyle="Italic" IsReadOnly="True"/>
+                    <TextBox HorizontalAlignment="Center" Margin="0,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1122" Text="* How accurate are the predictions provided by the Co-Op Predictor?" Height="30" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" IsReadOnly="True"/>
+                    <TextBox HorizontalAlignment="Center" Margin="0,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1084" Text="Academy Ally offers Career Preparation tools that assist students in planning for their future careers. This includes Course and Co-Op Preparation resources designed to develop relevant skills and knowledge for the job market." Height="50" FontSize="18" BorderBrush="{x:Null}" FontStyle="Italic" IsReadOnly="True"/>
+                    <TextBox HorizontalAlignment="Center" Margin="0,570,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1084" Text="While Academy Ally employs advanced algorithms and data analysis techniques to generate predictions, it's important to acknowledge that predictions are inherently probabilistic and may not always be 100% accurate. However, the application strives to provide valuable insights to support students in their academic and career planning endeavors." Height="83" FontSize="18" BorderBrush="{x:Null}" FontStyle="Italic" IsReadOnly="True"/>
+                </Grid>
             </TabItem>
             <TabItem Header="My Profile" Margin="287,-2,-393,0">
                 <Grid Background="#FFE5E5E5"/>
@@ -51,7 +65,7 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
-
+        <Frame x:Name="CourseFrame"/>   
     </Grid>
 </Page>
 

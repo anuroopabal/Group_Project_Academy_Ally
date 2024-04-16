@@ -39,5 +39,11 @@ namespace Academy_Ally
         {
             MessageBox.Show("Course Prediction successfull");
         }
+        private void TabSelection(object sender, SelectionChangedEventArgs e)
+        {
+            string selectedTabItem = ((TabItem)e.AddedItems[0]).Header.ToString();
+            // Navigate using NavigationManager
+            Navigation.NavigateToPage(selectedTabItem, CourseFrame);
+        }
     }
 }

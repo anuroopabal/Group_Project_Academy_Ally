@@ -8,7 +8,7 @@
       d:DesignHeight="750" d:DesignWidth="1200"
       Title="Home">
 
-    <Grid>
+    <Grid Background="White">
         <Image HorizontalAlignment="Left" Height="106" Margin="111,285,0,0" VerticalAlignment="Top" Width="132" Source="/predictive-chart.png"/>
         <Button x:Name="AcademicPredictor" Click="AcademicPredictor_Click" Content="Academic Predictors" HorizontalAlignment="Left" Height="52" Margin="56,422,0,0" VerticalAlignment="Top" Width="236" Background="#FF43B8FA" FontWeight="Bold" FontSize="24" Cursor="Arrow"/>
         <Image HorizontalAlignment="Left" Height="106" Margin="996,285,0,0" VerticalAlignment="Top" Width="115" Source="/good-feedback.png"/>
