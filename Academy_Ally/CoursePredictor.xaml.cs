@@ -33,16 +33,11 @@ namespace Academy_Ally
             string subject4 = sub4.Text;    
             string subject5 = sub5.Text;
 
-
-
-
-        MessageBox.Show("Course Prediction successfull");
-
         }
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Course Prediction successfull");
         }
     }
 }

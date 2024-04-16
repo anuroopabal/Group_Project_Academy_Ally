@@ -29,11 +29,11 @@
                     <Label Content="Course Suggested :" HorizontalAlignment="Left" Height="40" Margin="28,615,0,0" VerticalAlignment="Top" Width="170" Background="#FFEEB84F" FontWeight="Bold" FontSize="18"/>
                     <Label Content="SQATE - Conestoga" Height="44" Margin="0,60,0,0" VerticalAlignment="Top" Width="1194" HorizontalContentAlignment="Center" FontWeight="Bold" RenderTransformOrigin="0.458,0.452" FontSize="24" Background="#FF9FF0B0"/>
                     <TextBox HorizontalAlignment="Left" Height="40" Margin="230,619,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500"/>
-                    <Label Content="Subject 1" HorizontalAlignment="Left" Height="31" Margin="29,140,0,0" VerticalAlignment="Top" Width="147" FontSize="18"/>
-                    <Label Content="Subject 2" HorizontalAlignment="Left" Height="31" Margin="29,230,0,0" VerticalAlignment="Top" Width="147" FontSize="18"/>
-                    <Label Content="Subject 5" HorizontalAlignment="Left" Height="31" Margin="28,500,0,0" VerticalAlignment="Top" Width="146" FontSize="18"/>
-                    <Label Content="Subject 4" HorizontalAlignment="Left" Height="31" Margin="28,410,0,0" VerticalAlignment="Top" Width="147" FontSize="18"/>
-                    <Label Content="Subject 3" HorizontalAlignment="Left" Height="31" Margin="29,320,0,0" VerticalAlignment="Top" Width="147" FontSize="18"/>
+                    <Label Content="High Quality Programming" HorizontalAlignment="Left" Height="35" Margin="29,140,0,0" VerticalAlignment="Top" Width="229" FontSize="18"/>
+                    <Label Content="SQA Methodologies" HorizontalAlignment="Left" Height="35" Margin="29,230,0,0" VerticalAlignment="Top" Width="201" FontSize="18"/>
+                    <Label Content="System Analysis &amp; Design" HorizontalAlignment="Left" Height="35" Margin="28,500,0,0" VerticalAlignment="Top" Width="258" FontSize="18"/>
+                    <Label Content="Software Testing Tools" HorizontalAlignment="Left" Height="35" Margin="28,410,0,0" VerticalAlignment="Top" Width="230" FontSize="18"/>
+                    <Label Content="Software Engineering Principles" HorizontalAlignment="Left" Height="35" Margin="29,320,0,0" VerticalAlignment="Top" Width="259" FontSize="18"/>
                 </Grid>
 
 
