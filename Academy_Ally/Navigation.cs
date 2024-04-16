@@ -22,13 +22,18 @@ namespace Academy_Ally
                         frame.NavigationService.Navigate(new Home());
                         break;
                     case "Log Out":
-                        MessageBox.Show("Log out successful!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Logged out successfully!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
                         MainWindow mainWindow = new MainWindow();
+                        Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.IsActive).Close();
                         mainWindow.Show();
-                        //Close the current window
-                        //Window.GetWindow(this)?.Close();
                         break;
                 }
             }
+
+        public static void CloseWindow(Window window)
+        {
+            window?.Close();
         }
+
+    }
     }

@@ -15,6 +15,7 @@
     <None Remove="help.jpg" />
     <None Remove="logo.png" />
     <None Remove="predictive-chart.png" />
+    <None Remove="predictor.png" />
     <None Remove="user.png" />
   </ItemGroup>
 
@@ -29,6 +30,7 @@
     <Resource Include="help.jpg" />
     <Resource Include="logo.png" />
     <Resource Include="predictive-chart.png" />
+    <Resource Include="predictor.png" />
     <Resource Include="user.png" />
   </ItemGroup>
 

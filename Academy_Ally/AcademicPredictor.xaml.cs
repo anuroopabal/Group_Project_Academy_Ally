@@ -36,5 +36,13 @@ namespace Academy_Ally
                 PredictorFrame.NavigationService.Navigate(new CoursePredictor());
             }
         }
+
+        private void TabSelection(object sender, SelectionChangedEventArgs e)
+        {
+            string selectedTabItem = ((TabItem)e.AddedItems[0]).Header.ToString();
+            // Navigate using NavigationManager
+            Navigation.NavigateToPage(selectedTabItem, PredictorFrame);
+        }
+
     }
 }
