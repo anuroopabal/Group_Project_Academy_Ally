@@ -24,5 +24,7 @@ namespace Academy_Ally
         {
             InitializeComponent();
         }
+
+       
     }
 }
