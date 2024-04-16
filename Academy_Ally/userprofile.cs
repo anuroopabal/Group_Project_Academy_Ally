@@ -1,44 +1,29 @@
-﻿using System.Windows.Forms;
-
-namespace UserProfileApp
+﻿namespace UserProfileApp.Pages
 {
-    public partial class UserProfileForm : Form
+    public class UserProfileModel : PageModel
     {
-        private object txtEmail;
-        private object txtName;
-        private object txtPhoneNumber;
-        private object txtAddress;
-        private object txtCourseName;
-        private string txtPassword;
+        public string Email { get; set; }
+        public string Name { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Address { get; set; }
+        public string CourseName { get; set; }
+        public string Password { get; set; }
 
-        public UserProfileForm()
+        public void OnGet()
         {
-            InitializeComponent();
             LoadUserProfile();
-        }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
         }
 
         private void LoadUserProfile()
         {
             // Load user profile details
-            string email = "john@graph.com";
-            string name = "Jon Doe";
-            string phoneNumber = "+1 xxx-xxx-xxxx";
-            string address = "123, ABC, Kitchener, ON";
-            string courseName = "[Course Name]";
-            string password = "*********";
-
-            // Display user profile details in the form
-            txtEmail = email;
-            txtName = name;
-            txtPhoneNumber = phoneNumber;
-            txtAddress = address;
-            txtCourseName = courseName;
-            txtPassword = password;
+            Email = "john@graph.com";
+            Name = "Jon Doe";
+            PhoneNumber = "+1 xxx-xxx-xxxx";
+            Address = "123, ABC, Kitchener, ON";
+            CourseName = "[Course Name]";
+            Password = "*********";
         }
     }
 }
+
