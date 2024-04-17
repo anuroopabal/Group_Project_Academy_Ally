@@ -9,11 +9,11 @@
       Title="Course_Rating">
 
     <Grid Background="White">
-        <TabControl HorizontalContentAlignment="Center" SelectionChanged = "TabSelection">
-            <TabItem Header="Home" Margin="-2,-2,-83,0">
+        <TabControl HorizontalContentAlignment="Center">
+            <TabItem Header="Home" Margin="-2,-2,-83,0" GotFocus="TabFocus">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="Course Predictor" Margin="82,-2,-200,0" IsSelected="True">
+            <TabItem Header="Course Predictor" Margin="82,-2,-200,0" IsSelected="True" GotFocus="TabFocus">
                 <Grid>
                     <Grid.Background>
                         <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
@@ -40,24 +40,19 @@
                         <Label Content ="Course Rating" HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" Width="1174" Background="#FFFCF6AC" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center"/>
                         <Label Content="SQATE - Conestoga" Height="44" Margin="0,75,0,10" VerticalAlignment="Top" Width="1174" HorizontalContentAlignment="Center" FontWeight="Bold" RenderTransformOrigin="0.458,0.452" FontSize="24" Background="#FF9FF0B0"/>
                         <Label x:Name="Sub" Content="Select the subject: " HorizontalAlignment="Left" Margin="350,162,0,0" VerticalAlignment="Top" Width="177" Height="35" FontWeight="Bold" FontSize="22" FontFamily="Calibri"/>
-                        <Image Source="/rat.png" Margin="564,-150,448,0" Grid.Row="2" Width="150" Height="150"/>
+                        <Image Source="/rat.png" Margin="561,-100,448,0" Grid.Row="2" Width="150" Height="150"/>
                         <!-- Course ComboBox -->
                         <ComboBox x:Name="CourseComboBox" Margin="532,162,350,5" Background="#F0F0F0" BorderBrush="#CCCCCC" BorderThickness="2" Foreground="#333333" FontSize="16" Padding="5">
-                          
-                            <!--<ComboBoxItem>High Quality Programming</ComboBoxItem>
+
+                            <ComboBoxItem IsSelected="true">High Quality Programming</ComboBoxItem>
                             <ComboBoxItem>SQA Methodologies</ComboBoxItem>
                             <ComboBoxItem>System Analysis &amp; Design</ComboBoxItem>
                             <ComboBoxItem>Software Testing Tools</ComboBoxItem>
-                            <ComboBoxItem>Software Engineering Principles</ComboBoxItem>-->
-                            <ComboBoxItem Content = "High Quality Programming" />
-                            <ComboBoxItem Content = "SQA Methodologies"/>
-                            <ComboBoxItem Content = "System Analysis &amp; Design"/>
-                            <ComboBoxItem Content = "Software Testing Tools"/>
-                            <ComboBoxItem Content = "Software Engineering Principles"/>
+                            <ComboBoxItem>Software Engineering Principles</ComboBoxItem>
                         </ComboBox>
 
                         <!-- Star Rating -->
-                        <Label Content="RATING" Grid.Row="2" Margin="9,160,5,-20" FontSize="20" FontWeight="Bold" Foreground="#333333" Width="160" Height="32" HorizontalContentAlignment="Center">
+                        <Label Content="RATING" Grid.Row="2" Margin="5,125,5,-20" FontSize="20" FontWeight="Bold" Foreground="#333333" Width="160" Height="32" HorizontalContentAlignment="Center">
                             <Label.Effect>
                                 <DropShadowEffect Color="#CCCCCC" Direction="315" ShadowDepth="2" Opacity="0.5"/>
                             </Label.Effect>
@@ -71,7 +66,7 @@
                                 <Thickness Left="10" Top="5" Right="10" Bottom="5"/>
                             </Label.Padding>
                         </Label>
-                        <WrapPanel x:Name="StarRadioButtons" Grid.Row="2" Margin="522,275,517,5" Orientation="Vertical" Width="160" Grid.RowSpan="2">
+                        <WrapPanel x:Name="StarRadioButtons" Grid.Row="2" Margin="510,240,520,1" Orientation="Vertical" Width="250" Grid.RowSpan="2">
                             <RadioButton HorizontalAlignment="Left" VerticalAlignment="Center" GroupName="StarRadioButtons" Margin="0 5">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock FontSize="16" Text=" 1 star" Width="47" Height="23" FontWeight="Bold"/>
@@ -96,10 +91,10 @@
                                     <TextBlock FontSize="20" Text="★★★★" FontWeight="Bold" Foreground="#FFD700"/>
                                 </StackPanel>
                             </RadioButton>
-                            <RadioButton HorizontalAlignment="Left" VerticalAlignment="Center" GroupName="StarRadioButtons" Margin="0 5">
-                                <StackPanel Orientation="Horizontal">
+                            <RadioButton HorizontalAlignment="Left" VerticalAlignment="Center" GroupName="StarRadioButtons" Margin="0 5" Width="250">
+                                <StackPanel Orientation="Horizontal" Width="250">
                                     <TextBlock FontSize="16" Text=" 5 star" Width="47" Height="23" FontWeight="Bold"/>
-                                    <TextBlock FontSize="20" Text="★★★★★" FontWeight="Bold" Foreground="#FFD700" Width="90"/>
+                                    <TextBlock FontSize="20" Text="★★★★★" FontWeight="Bold" Foreground="#FFD700" Width="250"/>
                                 </StackPanel>
                             </RadioButton>
                         </WrapPanel>
@@ -131,14 +126,14 @@
                     <TextBox HorizontalAlignment="Center" Margin="0,570,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1084" Text="While Academy Ally employs advanced algorithms and data analysis techniques to generate predictions, it's important to acknowledge that predictions are inherently probabilistic and may not always be 100% accurate. However, the application strives to provide valuable insights to support students in their academic and career planning endeavors." Height="83" FontSize="18" BorderBrush="{x:Null}" FontStyle="Italic" IsReadOnly="True"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="My Profile" Margin="287,-2,-393,0">
+            <TabItem Header="My Profile" Margin="287,-2,-393,0" GotFocus="TabFocus">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="Log Out" Margin="392,-2,-496,0">
+            <TabItem Header="Log Out" Margin="392,-2,-496,0" GotFocus="TabFocus">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
-        <Frame x:Name="CourseRatingFrame"/>
+        <Frame x:Name="RatingFrame"/>
 
     </Grid>
 </Page>
