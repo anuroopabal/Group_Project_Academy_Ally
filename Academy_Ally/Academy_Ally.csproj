@@ -18,6 +18,7 @@
     <None Remove="logo.png" />
     <None Remove="predictive-chart.png" />
     <None Remove="predictor.png" />
+    <None Remove="rat.png" />
     <None Remove="Resume.png" />
     <None Remove="user.png" />
   </ItemGroup>
@@ -36,6 +37,7 @@
     <Resource Include="logo.png" />
     <Resource Include="predictive-chart.png" />
     <Resource Include="predictor.png" />
+    <Resource Include="rat.png" />
     <Resource Include="Resume.png" />
     <Resource Include="user.png" />
   </ItemGroup>

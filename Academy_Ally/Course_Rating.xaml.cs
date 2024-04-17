@@ -24,29 +24,31 @@ namespace Academy_Ally
         {
             InitializeComponent();
         }
-        private void HomeButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Handle Home button click
-        }
 
-        private void CourseRatingButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Handle Course Rating button click
-            CourseRatingGrid.Visibility = Visibility.Visible;
-        }
+        //private void CourseRatingButton_Click(object sender, RoutedEventArgs e) 
+        //{ 
+        //    // Handle Course Rating button click
+        //    CourseRatingGrid.Visibility = Visibility.Visible;
+        //}
 
-        private void StarRadioButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Handle star rating click
-            RadioButton radioButton = sender as RadioButton;
-            int rating = int.Parse(radioButton.Content.ToString().Split()[0]); // Extract rating from button content
-                                                                               // MessageBox.Show($"Selected Rating: {rating}");
-        }
+        //private void StarRadioButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    // Handle star rating click
+        //    RadioButton radioButton = sender as RadioButton;
+        //    int rating = int.Parse(radioButton.Content.ToString().Split()[0]); // Extract rating from button content
+        //                                                                       // MessageBox.Show($"Selected Rating: {rating}");
+        //}
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             // Handle submit button click
             MessageBox.Show("Rating submitted successfully!");
+        }
+        private void TabSelection(object sender, SelectionChangedEventArgs e)
+        {
+            string selectedTabItem = ((TabItem)e.AddedItems[0]).Header.ToString();
+            // Navigate using NavigationManager
+            Navigation.NavigateToPage(selectedTabItem, CourseRatingFrame);
         }
     }
 }
