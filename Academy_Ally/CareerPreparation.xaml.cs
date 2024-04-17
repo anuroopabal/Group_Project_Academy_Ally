@@ -12,32 +12,38 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using static Academy_Ally.Navigation;
 
 namespace Academy_Ally
 {
     /// <summary>
-    /// Interaction logic for cooppredictor.xaml
+    /// Interaction logic for CareerPreparation.xaml
     /// </summary>
-    public partial class Cooppredictor : Page
+    public partial class CareerPreparation : Page
     {
-        public Cooppredictor()
+        public CareerPreparation()
         {
             InitializeComponent();
         }
-
-        private void SubmitButton_Click(object sender, RoutedEventArgs e)
+        private void RadioButton_Clicked(object sender, RoutedEventArgs e)
         {
-
-            //Register register = new Register();
-            //CoopFrame.NavigationService.Navigate(new Home());
+            if (CoopPrep.IsChecked == true)
+            {
+                PredictorFrame.NavigationService.Navigate(new CoOpPreparation());
+            }
+            else
+            {
+                PredictorFrame.NavigationService.Navigate(new CoursePreparation());
+            }
         }
 
-        private void TabSelection(object sender, SelectionChangedEventArgs e) 
+        private void TabSelection(object sender, SelectionChangedEventArgs e)
         {
             string selectedTabItem = ((TabItem)e.AddedItems[0]).Header.ToString();
             // Navigate using NavigationManager
-            Navigation.NavigateToPage(selectedTabItem, CoopFrame);
+            Navigation.NavigateToPage(selectedTabItem, PredictorFrame);
+
+
+
         }
     }
 }

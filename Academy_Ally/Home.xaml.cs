@@ -41,7 +41,7 @@ namespace Academy_Ally
         }
         private void CareerPreparation_Click(object sender, RoutedEventArgs e)
         {
-            HomeFrame.NavigationService.Navigate(new CoursePreparation());
+            HomeFrame.NavigationService.Navigate(new CareerPreparation());
         }
         private void CourseRating_Click(object sender, RoutedEventArgs e)
         {
@@ -49,9 +49,7 @@ namespace Academy_Ally
         }
         private void GradeCalculator_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService navService = NavigationService.GetNavigationService(this);
-            CoursePreparation coursePreparation = new CoursePreparation();
-            navService.Navigate(coursePreparation);
+            HomeFrame.NavigationService.Navigate(new GradeCalculator());
         }
     }
 }

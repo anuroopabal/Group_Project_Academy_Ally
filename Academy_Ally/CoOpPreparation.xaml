@@ -1,0 +1,46 @@
+﻿<Page x:Class="Academy_Ally.CoOpPreparation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Academy_Ally"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="1200"
+      Title="CoOpPreparation">
+
+    <Grid Background="#FFF9F6F6">
+        <TabControl HorizontalContentAlignment="Center">
+            <TabItem Header="Home" Margin="-2,-2,-83,0">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Career Preparation" Margin="82,-2,-200,0" IsSelected="True">
+                <Grid RenderTransformOrigin="0.154,0.505">
+                    <Image HorizontalAlignment="Center" Height="135" Margin="0,189,0,0" VerticalAlignment="Top" Width="154" Source="/interview.png"/>
+                    <Image HorizontalAlignment="Left" Height="135" Margin="245,186,0,0" VerticalAlignment="Top" Width="154" Source="/Resume.png" RenderTransformOrigin="0.922,0.472"/>
+                    <Image HorizontalAlignment="Left" Height="135" Margin="812,189,0,0" VerticalAlignment="Top" Width="154" Source="/Jobs.png"/>
+                    <Label Content="Co-Op Preparation" HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" Width="1174" Background="#FFFCF6AC" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center"/>
+                    <Button x:Name="Resume" Click="Resume_Click" Content="Build Resume" HorizontalAlignment="Left" Margin="245,361,0,0" VerticalAlignment="Top" Width="129" Height="36" Background="#FF92EB24" FontWeight="Bold" FontSize="14"/>
+                    <Button x:Name="Interview" Click="Interview_Click" Content="Interview Preparation" HorizontalAlignment="Center" Margin="0,361,0,0" VerticalAlignment="Top" Width="167" Height="36" Background="#FF92EB24" FontWeight="Bold" FontSize="14"/>
+                    <Button x:Name="Job" Click="Job_Click" Content="Job Search" HorizontalAlignment="Left" Margin="824,356,0,0" VerticalAlignment="Top" Width="130" Height="41" Background="#FF92EB24" FontWeight="Bold" FontSize="14"  />
+
+                </Grid>
+
+
+            </TabItem>
+            <TabItem Header="Help" Margin="0,-2,-195,0" HorizontalAlignment="Right" Width="200">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="FAQ" Margin="195,-2,-287,0">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="My Profile" Margin="287,-2,-393,0">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Log Out" Margin="392,-2,-496,0">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Page>
+
