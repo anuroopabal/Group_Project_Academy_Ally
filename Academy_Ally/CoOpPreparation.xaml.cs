@@ -24,5 +24,22 @@ namespace Academy_Ally
         {
             InitializeComponent();
         }
+
+      
+
+        private void Resume_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Guide to Build your resume with ATS");
+        }
+
+        private void Interview_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Interview preparation links");
+        }
+
+        private void Job_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Job search assistancee through LinkedIn");
+        }
     }
 }

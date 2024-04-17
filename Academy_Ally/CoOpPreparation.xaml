@@ -14,11 +14,14 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
             <TabItem Header="Career Preparation" Margin="82,-2,-200,0" IsSelected="True">
-                <Grid>
-                    <Image HorizontalAlignment="Left" Height="100" Margin="204,118,0,0" VerticalAlignment="Top" Width="100" Source="/interview.png"/>
-                    <Image Height="100" Width="100"/>
-                    <Image HorizontalAlignment="Left" Height="102" Margin="409,118,0,0" VerticalAlignment="Top" Width="129" Source="/Resume.png"/>
-                    <Image HorizontalAlignment="Left" Height="98" Margin="597,118,0,0" VerticalAlignment="Top" Width="122" Source="/Jobs.png"/>
+                <Grid RenderTransformOrigin="0.154,0.505">
+                    <Image HorizontalAlignment="Center" Height="135" Margin="0,189,0,0" VerticalAlignment="Top" Width="154" Source="/interview.png"/>
+                    <Image HorizontalAlignment="Left" Height="135" Margin="245,186,0,0" VerticalAlignment="Top" Width="154" Source="/Resume.png" RenderTransformOrigin="0.922,0.472"/>
+                    <Image HorizontalAlignment="Left" Height="135" Margin="812,189,0,0" VerticalAlignment="Top" Width="154" Source="/Jobs.png"/>
+                    <Label Content="Co-Op Preparation" HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" Width="1174" Background="#FFFCF6AC" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center"/>
+                    <Button x:Name="Resume" Click="Resume_Click" Content="Build Resume" HorizontalAlignment="Left" Margin="245,361,0,0" VerticalAlignment="Top" Width="129" Height="36" Background="#FF92EB24" FontWeight="Bold" FontSize="14"/>
+                    <Button x:Name="Interview" Click="Interview_Click" Content="Interview Preparation" HorizontalAlignment="Center" Margin="0,361,0,0" VerticalAlignment="Top" Width="167" Height="36" Background="#FF92EB24" FontWeight="Bold" FontSize="14"/>
+                    <Button x:Name="Job" Click="Job_Click" Content="Job Search" HorizontalAlignment="Left" Margin="824,356,0,0" VerticalAlignment="Top" Width="130" Height="41" Background="#FF92EB24" FontWeight="Bold" FontSize="14"  />
 
                 </Grid>
 
