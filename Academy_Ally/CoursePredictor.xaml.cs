@@ -27,15 +27,6 @@ namespace Academy_Ally
             InitializeComponent();
             
         }
-        private void CoursePredictor_Subject(object sender, RoutedEventArgs e)
-        {
-            string subject1 = sub1.Text;
-            string subject2 = sub2.Text;
-            string subject3 = sub3.Text;
-            string subject4 = sub4.Text;    
-            string subject5 = sub5.Text;
-
-        }
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
@@ -51,35 +42,83 @@ namespace Academy_Ally
         }
         private void CoursePredictorLogic()
         {
-            int subject1Mark = int.Parse(sub1.Text);
-            int subject2Mark = int.Parse(sub2.Text);
-            int subject3Mark = int.Parse(sub3.Text);
-            int subject4Mark = int.Parse(sub4.Text);
-            int subject5Mark = int.Parse(sub5.Text);
-            if (subject1Mark > 70)
+            try
             {
-                Output.Text = "Computer Applications Development(0066)";
+                double subject1Mark = double.Parse(sub1.Text);
+                double subject2Mark = double.Parse(sub2.Text);
+                double subject3Mark = double.Parse(sub3.Text);
+                double subject4Mark = double.Parse(sub4.Text);
+                double subject5Mark = double.Parse(sub5.Text);
+
+                if (!ValidateMarks(subject1Mark) || !ValidateMarks(subject2Mark) || !ValidateMarks(subject3Mark) || !ValidateMarks(subject4Mark) || !ValidateMarks(subject5Mark))
+                {
+                    MessageBox.Show("Invalid input. Marks must be between 0 and 100.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                if (subject1Mark < 60 || subject2Mark < 60 || subject3Mark < 60 || subject4Mark < 60 || subject5Mark < 60)
+                {
+                    MessageBox.Show("Oops, you are not eligible for next course. Check your grades.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    Output.Background = Brushes.Yellow;
+                    if (subject1Mark > 70)
+                    {
+                        Output.Text = "Computer Applications Development(0066)";
+                    }
+                    else if (subject2Mark > 70)
+                    {
+                        Output.Text = "Technical Systems Analysis (1601)";
+                    }
+                    else if (subject3Mark > 70)
+                    {
+                        Output.Text = "Information Technology Project Management (1566)";
+                    }
+                    else if (subject4Mark > 70)
+                    {
+                        Output.Text = "Information Technology Network Security (1475)";
+                    }
+                    else if (subject5Mark > 70)
+                    {
+                        Output.Text = "Virtualization and Cloud Computing (1523)";
+                    }
+                    else
+                    {
+                        Output.Text = "Project Management (1298)";
+                    }
+                }
             }
-            else if (subject2Mark > 70)
+            catch 
             {
-                Output.Text = "Technical Systems Analysis (1601)";
+                MessageBox.Show("Invalid input. Please enter valid marks for all subjects.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            else if (subject3Mark > 70)
+        }
+
+        private void Enter(object sender, RoutedEventArgs e)
+        {
+            TextBox sub = sender as TextBox;
+            if (sub.Text == "Enter mark")
             {
-                Output.Text = "Information Technology Project Management (1566)";
+                sub.Text = "";
+                sub.Foreground = Brushes.Black;
+                sub.FontStyle = FontStyles.Normal;
             }
-            else if (subject4Mark > 70)
+        }
+
+        private void Leave(object sender, RoutedEventArgs e)
+        {
+            TextBox sub = sender as TextBox;
+            if (sub.Text == "")
             {
-                Output.Text = "Information Technology Network Security (1475)";
+                sub.Text = "Enter mark";
+                sub.Foreground = Brushes.Gray;
+                sub.FontStyle = FontStyles.Italic;
             }
-            else if (subject5Mark > 70)
-            {
-                Output.Text = "Virtualization and Cloud Computing (1523)";
-            }
-            else
-            {
-                Output.Text = "Project Management (1298)";
-            }
+        }
+        private bool ValidateMarks(double mark)
+        {
+            // Validate that the mark is within the range of 0 to 100
+            return mark >= 0 && mark <= 100;
         }
     }
 }
