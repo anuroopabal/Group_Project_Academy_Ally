@@ -25,6 +25,20 @@ namespace Academy_Ally
             InitializeComponent();
         }
 
-       
+        private void Onlinetutorial_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Tutorials to enhace your technical skills.");
+        }
+
+        private void AcademicCert(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Certification for recording your knowledge.");
+        }
+        private void TabSelection(object sender, SelectionChangedEventArgs e)
+        {
+            string selectedTabItem = ((TabItem)e.AddedItems[0]).Header.ToString();
+            // Navigate using NavigationManager
+            Navigation.NavigateToPage(selectedTabItem, CoursePrepFrame);
+        }
     }
 }
