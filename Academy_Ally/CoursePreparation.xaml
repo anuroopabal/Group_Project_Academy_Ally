@@ -9,38 +9,78 @@
       Title="CoursePreparation">
 
     <Grid Background="#FFF8F6F6">
-        <TabControl>
-            <TabItem Header="Home" Margin="-2,-2,-44,0"/>
-
-            <TabItem Header="Course Prepararation" Margin="44,-2,-119,0">
-                <Grid Background="#FFE5E5E5" Height="229" Margin="51,0,520,0">
-                    <ComboBox HorizontalAlignment="Center" Margin="0,-44,0,0" VerticalAlignment="Top" Width="223">
-                        <ComboBoxItem Content="Course preparation"/>
-                        <ComboBoxItem Content="Co-op preparation"/>
-                    </ComboBox>
-
-                    <RadioButton Content="Course-Preperation" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" Height="31" Width="149" RenderTransformOrigin="0.455,0.823"/>
-                    <RadioButton Content="Co-op Preperation" HorizontalAlignment="Center" Margin="0,84,0,0" VerticalAlignment="Top" Height="30" Width="149" RenderTransformOrigin="0.455,0.823"/>
+        <TabControl HorizontalContentAlignment="Center">
+            <TabItem Header="Home" Margin="-2,-2,-83,0">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
 
 
+            <TabItem Header="Career Preperation" Margin="82,-2,-200,0" IsSelected="True">
+
+
+
+
+                <Grid Height="164" Margin="50,-400,922,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="22*"/>
+                        <ColumnDefinition Width="15*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <RadioButton Content="Course-Preperation" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" Height="31" Width="150" RenderTransformOrigin="0.455,0.823" Grid.ColumnSpan="2"/>
+                    <RadioButton Content="Co-op Preperation" HorizontalAlignment="Center" Margin="0,84,0,0" VerticalAlignment="Top" Height="30" Width="150" RenderTransformOrigin="0.455,0.823" Grid.ColumnSpan="2"/>
+                    <Image Source="/images/online-graduation_46707.png" Stretch="Fill" Margin="160,-20,-240,35" Grid.Column="1"/>
+
+                    <Border BorderBrush="Black" BorderThickness="1" Height="160" Width="208" Grid.ColumnSpan="2" Margin="7,2,7,2"/>
+                    <Label Content="Career Preparation details" Margin="7,-53,7,182" Grid.ColumnSpan="2"/>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="65,-10,22,174" RenderTransformOrigin="0.5,0.5" >
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+
+                    <Image Source="/academic certification.png" Stretch="Fill" Margin="531,4,-605,35" Grid.Column="1" />
+                    <Button Content="Online Tutorials" Margin="160,160,-240,-37" Grid.Column="1"/>
+                    <Button Content="Academic certifications" Margin="531,160,-605,-37" Grid.Column="1"/>
                 </Grid>
+
             </TabItem>
-            <TabItem Header="Help" Margin="86,-2,-168,0">
+
+            <TabItem Header="Help" Margin="0,-2,-195,0" HorizontalAlignment="Right" Width="200">
+
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="FAQ" Margin="138,-2,-194,0">
+
+            <TabItem Header="FAQ" Margin="195,-2,-287,0">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="My Profile" Margin="191,-2,-276,0">
+
+
+
+            <TabItem Header="My Profile" Margin="287,-2,-393,0">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="Logout" Margin="243,-2,-349,0">
+            <TabItem Header="Log Out" Margin="392,-2,-496,0">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <ComboBox Width="120"/>
-            <ComboBox Width="120"/>
+
+
+
+
+
+
+
+            <!--<Image Height="500" Width="500"/>
+            <Image Height="512" Source="/images/online-graduation_46707.png" Stretch="Fill" Width="512"/>
+            <Image Height="500" Source="/academic certification.png" Stretch="Fill" Width="500"/>-->
+
         </TabControl>
 
-    
+
     </Grid>
 </Page>
