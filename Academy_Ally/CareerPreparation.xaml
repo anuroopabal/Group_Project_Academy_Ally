@@ -20,8 +20,8 @@
                         <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
                     </Grid.Background>
                     <Label Content="Select the predictor" HorizontalAlignment="Left" Margin="291,103,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="CoopP" Content="Co-op Preparation" HorizontalAlignment="Left" Margin="440,108,0,0" VerticalAlignment="Top" IsChecked="True"/>
-                    <RadioButton x:Name="CourseP" Content="Course Preparation" HorizontalAlignment="Left" Margin="612,108,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="CoopPrep" Content="Co-op Preparation" HorizontalAlignment="Left" Margin="440,108,0,0" VerticalAlignment="Top" IsChecked="True"/>
+                    <RadioButton x:Name="CoursePrep" Content="Course Preparation" HorizontalAlignment="Left" Margin="612,108,0,0" VerticalAlignment="Top"/>
                     <Button Content="Go" HorizontalAlignment="Left" Margin="750,108,0,0" VerticalAlignment="Top" Click="RadioButton_Clicked" />
                 </Grid>
             </TabItem>

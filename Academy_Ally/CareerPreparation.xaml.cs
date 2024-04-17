@@ -24,5 +24,26 @@ namespace Academy_Ally
         {
             InitializeComponent();
         }
+        private void RadioButton_Clicked(object sender, RoutedEventArgs e)
+        {
+            if (CoopPrep.IsChecked == true)
+            {
+                PredictorFrame.NavigationService.Navigate(new CoOpPreparation());
+            }
+            else
+            {
+                PredictorFrame.NavigationService.Navigate(new CoursePreparation());
+            }
+        }
+
+        private void TabSelection(object sender, SelectionChangedEventArgs e)
+        {
+            string selectedTabItem = ((TabItem)e.AddedItems[0]).Header.ToString();
+            // Navigate using NavigationManager
+            Navigation.NavigateToPage(selectedTabItem, PredictorFrame);
+
+
+
+        }
     }
 }
