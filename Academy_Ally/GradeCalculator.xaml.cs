@@ -16,15 +16,13 @@ using System.Windows.Shapes;
 namespace Academy_Ally
 {
     /// <summary>
-    /// Interaction logic for CoursePreparation.xaml
+    /// Interaction logic for GradeCalculator.xaml
     /// </summary>
-    public partial class CoursePreparation : Page
+    public partial class GradeCalculator : Page
     {
-        public CoursePreparation()
+        public GradeCalculator()
         {
             InitializeComponent();
         }
-
-       
     }
 }
