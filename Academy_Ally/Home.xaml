@@ -20,7 +20,7 @@
                 <ColumnDefinition Width="952*"/>
                 <ColumnDefinition Width="253*"/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="UserProfile" HorizontalAlignment="Left" Height="74" Margin="98,0,0,100" VerticalAlignment="Center" Width="77" Source="/user.png" Grid.Column="1"/>
+            <Image x:Name="UserProfile" HorizontalAlignment="Left" Height="74" Margin="98,0,0,100" VerticalAlignment="Center" Width="77" Source="/user.png" Grid.Column="1" MouseDown="UserProfileNav"/>
             <Label Content="Welcome to AcedemicAlly!!" HorizontalAlignment="Left" Margin="263,100,0,0" VerticalAlignment="Center" Foreground="#FF43B8FA" FontSize="48" FontWeight="Bold"/>
             <Label x:Name="dateDisplay" Loaded="DateTime_Loaded" HorizontalAlignment="Left" Margin="900,0,0,100" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
         </Grid>

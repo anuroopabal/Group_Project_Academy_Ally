@@ -51,5 +51,10 @@ namespace Academy_Ally
         {
             HomeFrame.NavigationService.Navigate(new GradeCalculator());
         }
+
+        private void UserProfileNav(object sender, MouseButtonEventArgs e)
+        {
+            HomeFrame.NavigationService.Navigate(new GradeCalculator());
+        }
     }
 }
