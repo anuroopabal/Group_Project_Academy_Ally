@@ -2,12 +2,12 @@
 {
     public class UserProfileModel : PageModel
     {
-        public required string Email { get; set; }
-        public required string Name { get; set; }
-        public required string PhoneNumber { get; set; }
-        public required string Address { get; set; }
-        public required string CourseName { get; set; }
-        public required string Password { get; set; }
+        string Email { get; set; }
+        string Name { get; set; }
+        string PhoneNumber { get; set; }
+        string Address { get; set; }
+        string CourseName { get; set; }
+        string Password { get; set; }
 
         public void OnGet()
         {

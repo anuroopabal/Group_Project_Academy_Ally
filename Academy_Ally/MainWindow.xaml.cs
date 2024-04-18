@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using System.Configuration;
 using System.Data;
 using System.Net;
 using System.Text;
@@ -39,11 +40,12 @@ namespace Academy_Ally
 
 
 
-            /*try
+            try
             {
-                SqlConnection connection = new SqlConnection(@"Data Source=Rooz;Initial Catalog = AcademyAlly; Integrated Security = True; Trust Server Certificate=True");
-                string insertQuery = $"SELECT COUNT(*) from  AcademyAlly.dbo.UserDetails WHERE Email = '{username}'and Password = '{password}'";
-                SqlCommand cmd = new SqlCommand(insertQuery, connection);
+                string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                SqlConnection connection = new SqlConnection(connectionString);
+                string selectQuery = $"SELECT COUNT(*) from  AcademyAlly.dbo.UserDetails WHERE Email = '{username}'and Password = '{password}'";
+                SqlCommand cmd = new SqlCommand(selectQuery, connection);
                 DataTable dt = new DataTable();
                 connection.Open();
                 SqlDataReader sdr = cmd.ExecuteReader();
@@ -61,10 +63,11 @@ namespace Academy_Ally
             // Validate user credentials (example: for demonstration purposes)
             if (count>0)
             {
-                // Navigate to the next page or perform any other action*/
+                // Navigate to the next page or perform any other action
                 MessageBox.Show("Login successful.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                CurrentUser.Username = username;
                 Content = new Home();
-            /*}
+            }
             else
             {
                 MessageBox.Show("Invalid username or password. Please try again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -72,7 +75,7 @@ namespace Academy_Ally
                 txtPassword.Clear();
                 // Set focus to username field
                 txtUsername.Focus();
-            }*/
+            }
             
         }
 

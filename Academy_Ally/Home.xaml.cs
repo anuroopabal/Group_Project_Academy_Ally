@@ -2,6 +2,7 @@
 using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -28,6 +29,28 @@ namespace Academy_Ally
         public Home()
         {
             InitializeComponent();
+
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                SqlConnection connection = new SqlConnection(connectionString);
+                string selectQuery = $"SELECT Name from  AcademyAlly.dbo.UserDetails WHERE Email = '{CurrentUser.Username}'";
+                SqlCommand cmd = new SqlCommand(selectQuery, connection);
+                DataTable dt = new DataTable();
+                connection.Open();
+                SqlDataReader sdr = cmd.ExecuteReader();
+                dt.Load(sdr);
+                string name = dt.Rows[0][0].ToString();
+                connection.Close();
+                Title.Content = $"Welcome {name} to AcedemyAlly!!";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+
         }
 
         private void DateTime_Loaded(object sender, RoutedEventArgs e)
@@ -55,6 +78,13 @@ namespace Academy_Ally
         private void UserProfileNav(object sender, MouseButtonEventArgs e)
         {
             HomeFrame.NavigationService.Navigate(new profile());
+        }
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Logged out successfully!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+            MainWindow mainWindow = new MainWindow();
+            Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.IsActive).Close();
+            mainWindow.Show();
         }
     }
 }
