@@ -28,10 +28,11 @@ namespace Academy_Ally
         {
             MessageBox.Show("Profile updates are saved.");
         }
-
-        private void HomeNav(object sender, MouseButtonEventArgs e)
+        private void TabSelection(object sender, SelectionChangedEventArgs e)
         {
-            ProFrame.NavigationService.Navigate(new Home());
+            string selectedTabItem = ((TabItem)e.AddedItems[0]).Header.ToString();
+            // Navigate using NavigationManager
+            Navigation.NavigateToPage(selectedTabItem, CourseFrame);
         }
     }
 }
