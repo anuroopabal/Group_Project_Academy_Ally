@@ -24,5 +24,9 @@ namespace Academy_Ally
         {
             InitializeComponent();
         }
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Profile updates are saved.");
+        }
     }
 }
