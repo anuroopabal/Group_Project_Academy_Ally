@@ -24,5 +24,10 @@ namespace Academy_Ally
         {
             InitializeComponent();
         }
+
+        private void CourseFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }
