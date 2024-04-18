@@ -18,7 +18,7 @@
                     <Grid.Background>
                         <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
                     </Grid.Background>
-                    <Label Content="Course Predictor" Margin="0,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.804,-3.871" Width="1194" FontSize="24" HorizontalContentAlignment="Center" Background="#FF04DBF1" FontWeight="Bold"/>
+                    <Label Content="Grade Calculator" Margin="0,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.804,-3.871" Width="1194" FontSize="24" HorizontalContentAlignment="Center" Background="#FF04DBF1" FontWeight="Bold"/>
 
 
 
@@ -57,7 +57,7 @@
             </TabItem>
         </TabControl>
         <Frame x:Name="CourseFrame"/>
-        <Label Content="Grade calculator" HorizontalAlignment="Center" Margin="0,105,0,0" VerticalAlignment="Top" Width="430"/>
+        
         <Label Content="Course Title" HorizontalAlignment="Left" Margin="86,204,0,0" VerticalAlignment="Top" Width="147"/>
         <Label Content="Software Testing Tools" HorizontalAlignment="Left" Margin="86,324,0,0" VerticalAlignment="Top"/>
         <Label Content="Software Testing Methodologies" HorizontalAlignment="Left" Margin="86,426,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6.575,0.686"/>

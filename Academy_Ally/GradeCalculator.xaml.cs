@@ -25,9 +25,10 @@ namespace Academy_Ally
             InitializeComponent();
         }
 
-        private void CourseFrame_Navigated(object sender, NavigationEventArgs e)
+        private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
-
+            //MessageBox.Show("Course Prediction successfull");
+            
         }
     }
 }
