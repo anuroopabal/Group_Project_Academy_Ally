@@ -8,4 +8,48 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="academic certification.png" />
+    <None Remove="calculator.png" />
+    <None Remove="career-path.png" />
+    <None Remove="careerPrep.png" />
+    <None Remove="good-feedback.png" />
+    <None Remove="help.jpg" />
+    <None Remove="home.png" />
+    <None Remove="interview.png" />
+    <None Remove="Jobs.png" />
+    <None Remove="logo.png" />
+    <None Remove="online-graduation_46707.png" />
+    <None Remove="predictive-chart.png" />
+    <None Remove="predictor.png" />
+    <None Remove="rat.png" />
+    <None Remove="Resume.png" />
+    <None Remove="user.png" />
+    <None Remove="usernew.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="academic certification.png" />
+    <Resource Include="calculator.png" />
+    <Resource Include="career-path.png" />
+    <Resource Include="careerPrep.png" />
+    <Resource Include="good-feedback.png" />
+    <Resource Include="help.jpg" />
+    <Resource Include="home.png" />
+    <Resource Include="interview.png" />
+    <Resource Include="Jobs.png" />
+    <Resource Include="logo.png" />
+    <Resource Include="online-graduation_46707.png" />
+    <Resource Include="predictive-chart.png" />
+    <Resource Include="predictor.png" />
+    <Resource Include="rat.png" />
+    <Resource Include="Resume.png" />
+    <Resource Include="user.png" />
+    <Resource Include="usernew.png" />
+  </ItemGroup>
+
 </Project>
