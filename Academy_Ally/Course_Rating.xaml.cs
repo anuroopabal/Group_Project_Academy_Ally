@@ -65,7 +65,7 @@ namespace Academy_Ally
                         RatingFrame.NavigationService.Navigate(new Home());
                         break;
                     case "My Profile":
-                        RatingFrame.NavigationService.Navigate(new Home());
+                        RatingFrame.NavigationService.Navigate(new profile());
                         break;
                     case "Log Out":
                         check = 1;

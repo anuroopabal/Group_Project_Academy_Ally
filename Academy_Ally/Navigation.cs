@@ -19,7 +19,7 @@ namespace Academy_Ally
                         frame.NavigationService.Navigate(new Home());
                         break;
                     case "My Profile":
-                        frame.NavigationService.Navigate(new Home());
+                        frame.NavigationService.Navigate(new profile());
                         break;
                     case "Log Out":
                         MessageBox.Show("Logged out successfully!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);

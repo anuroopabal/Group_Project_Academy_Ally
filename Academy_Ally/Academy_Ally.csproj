@@ -15,6 +15,7 @@
     <None Remove="careerPrep.png" />
     <None Remove="good-feedback.png" />
     <None Remove="help.jpg" />
+    <None Remove="home.png" />
     <None Remove="interview.png" />
     <None Remove="Jobs.png" />
     <None Remove="logo.png" />
@@ -24,6 +25,7 @@
     <None Remove="rat.png" />
     <None Remove="Resume.png" />
     <None Remove="user.png" />
+    <None Remove="usernew.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +39,7 @@
     <Resource Include="careerPrep.png" />
     <Resource Include="good-feedback.png" />
     <Resource Include="help.jpg" />
+    <Resource Include="home.png" />
     <Resource Include="interview.png" />
     <Resource Include="Jobs.png" />
     <Resource Include="logo.png" />
@@ -46,6 +49,7 @@
     <Resource Include="rat.png" />
     <Resource Include="Resume.png" />
     <Resource Include="user.png" />
+    <Resource Include="usernew.png" />
   </ItemGroup>
 
 </Project>
