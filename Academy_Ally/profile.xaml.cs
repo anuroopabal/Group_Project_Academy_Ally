@@ -28,5 +28,10 @@ namespace Academy_Ally
         {
             MessageBox.Show("Profile updates are saved.");
         }
+
+        private void HomeNav(object sender, MouseButtonEventArgs e)
+        {
+            ProFrame.NavigationService.Navigate(new Home());
+        }
     }
 }
