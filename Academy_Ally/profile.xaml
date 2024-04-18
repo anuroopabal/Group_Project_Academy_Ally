@@ -44,9 +44,21 @@
                 </Grid>
             </TabItem>
             <TabItem Header="My Profile" Margin="287,-2,-393,0" IsSelected="True">
-                <Grid Background="#FFE5E5E5">
+                <Grid Background="White">
 
-
+                    <TextBox x:Name="Email" HorizontalAlignment="Left" Height="24" Margin="323,79,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="475"/>
+                    <TextBox x:Name="UserName" HorizontalAlignment="Left" Height="24" Margin="323,129,0,0" TextWrapping="Wrap" Text="UserName" VerticalAlignment="Top" Width="475"/>
+                    <TextBox x:Name="PhoneNo" HorizontalAlignment="Left" Height="24" Margin="323,181,0,0" TextWrapping="Wrap" Text="Phone" VerticalAlignment="Top" Width="475"/>
+                    <TextBox x:Name="Address" HorizontalAlignment="Left" Height="26" Margin="323,233,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Width="475"/>
+                    <TextBox x:Name="Course" HorizontalAlignment="Left" Height="33" Margin="323,285,0,0" TextWrapping="Wrap" Text="Course" VerticalAlignment="Top" Width="475"/>
+                    <TextBox x:Name="Password" HorizontalAlignment="Left" Height="24" Margin="323,0,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Center" Width="475"/>
+                    <Label Content="Email&#x9;" HorizontalAlignment="Left" Height="24" Margin="107,79,0,0" VerticalAlignment="Top" Width="177" Background="#FF7CF5ED" FontWeight="Bold"/>
+                    <Label Content="Name&#x9;" HorizontalAlignment="Left" Height="24" Margin="107,129,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.49,0.744" Background="#FF7CF5ED" FontWeight="Bold"/>
+                    <Label Content="Phone No" HorizontalAlignment="Left" Height="24" Margin="107,181,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.471,0.738" Background="#FF7CF5ED" FontWeight="Bold"/>
+                    <Label Content="Address" HorizontalAlignment="Left" Height="26" Margin="107,233,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.471,0.738" Background="#FF7CF5ED" FontWeight="Bold"/>
+                    <Label Content="Course Name" HorizontalAlignment="Left" Height="33" Margin="107,285,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.471,0.738" Background="#FF7CF5ED" FontWeight="Bold"/>
+                    <Label Content="Password" HorizontalAlignment="Left" Height="24" Margin="107,0,0,0" VerticalAlignment="Center" Width="177" RenderTransformOrigin="0.471,0.738" Background="#FF7CF5ED" FontWeight="Bold"/>
+                    <Button x:Name="Update" Click="Update_Click" Content="Update" HorizontalAlignment="Left" Margin="370,478,0,0" VerticalAlignment="Top" Height="29" Width="115" FontWeight="Bold" FontSize="14" Background="#FF9EF73B" />
 
                 </Grid>
 
@@ -56,18 +68,6 @@
             </TabItem>
         </TabControl>
         <Frame x:Name="CourseFrame"/>
-        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="24" Margin="323,79,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="475"/>
-        <TextBox x:Name="UserName" HorizontalAlignment="Left" Height="24" Margin="323,129,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="475"/>
-        <TextBox x:Name="PhoneNo" HorizontalAlignment="Left" Height="24" Margin="323,187,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="475"/>
-        <TextBox x:Name="Address" HorizontalAlignment="Left" Height="24" Margin="323,247,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="475"/>
-        <TextBox x:Name="Course" HorizontalAlignment="Left" Height="24" Margin="323,306,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="475"/>
-        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="24" Margin="323,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="475"/>
-        <Label Content="Email&#x9;" HorizontalAlignment="Left" Height="24" Margin="107,79,0,0" VerticalAlignment="Top" Width="177" Background="#FF7CF5ED" FontWeight="Bold"/>
-        <Label Content="Name&#x9;" HorizontalAlignment="Left" Height="24" Margin="107,129,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.49,0.744" Background="#FF7CF5ED" FontWeight="Bold"/>
-        <Label Content="Phone No" HorizontalAlignment="Left" Height="24" Margin="107,181,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.471,0.738" Background="#FF7CF5ED" FontWeight="Bold"/>
-        <Label Content="Address" HorizontalAlignment="Left" Height="24" Margin="107,247,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.471,0.738" Background="#FF7CF5ED" FontWeight="Bold"/>
-        <Label Content="Course Name" HorizontalAlignment="Left" Height="24" Margin="107,306,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.471,0.738" Background="#FF7CF5ED" FontWeight="Bold"/>
-        <Label Content="Password" HorizontalAlignment="Left" Height="24" Margin="107,0,0,0" VerticalAlignment="Center" Width="177" RenderTransformOrigin="0.471,0.738" Background="#FF7CF5ED" FontWeight="Bold"/>
-        <Button x:Name="Save" Click="Save_Click" Content="Save" HorizontalAlignment="Left" Margin="370,478,0,0" VerticalAlignment="Top" Height="29" Width="115" FontWeight="Bold" FontSize="14" Background="#FF9EF73B" />
+
     </Grid>
 </Page>
