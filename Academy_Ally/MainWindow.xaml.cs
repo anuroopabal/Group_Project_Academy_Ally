@@ -86,6 +86,27 @@ namespace Academy_Ally
             CoursePredictor coursePredictor = new CoursePredictor();
             Content =  coursePredictor;
         }
+        private void Enter(object sender, RoutedEventArgs e)
+        {
+            TextBox sub = sender as TextBox;
+            if (sub.Text == "Email ID"|| sub.Text == "Password")
+            {
+                sub.Text = "";
+                sub.Foreground = Brushes.Black;
+                sub.FontStyle = FontStyles.Normal;
+            }
+        }
+
+        private void Leave(object sender, RoutedEventArgs e)
+        {
+            TextBox sub = sender as TextBox;
+            if (sub.Text == "")
+            {
+                sub.Text = "Email ID";
+                sub.Foreground = Brushes.Gray;
+                sub.FontStyle = FontStyles.Italic;
+            }
+        }
 
     }
 }
