@@ -21,11 +21,14 @@
                 <ColumnDefinition Width="253*"/>
             </Grid.ColumnDefinitions>
             <Image x:Name="UserProfile" HorizontalAlignment="Left" Height="74" Margin="98,0,0,100" VerticalAlignment="Center" Width="77" Source="/user.png" Grid.Column="1" MouseDown="UserProfileNav"/>
-            <Label Content="Welcome to AcedemicAlly!!" HorizontalAlignment="Left" Margin="263,100,0,0" VerticalAlignment="Center" Foreground="#FF43B8FA" FontSize="48" FontWeight="Bold"/>
+            <Viewbox>
+                <Label x:Name="Title" Content="" HorizontalAlignment="Left" Margin="263,100,0,0" VerticalAlignment="Center" Foreground="#FF43B8FA" FontSize="48" FontWeight="Bold"/>
+            </Viewbox>
             <Label x:Name="dateDisplay" Loaded="DateTime_Loaded" HorizontalAlignment="Left" Margin="900,0,0,100" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
         </Grid>
         <Image x:Name="CareerPreparation1" HorizontalAlignment="Left" Height="106" Margin="413,285,0,0" VerticalAlignment="Top" Width="132" Source="/career-path.png"/>
         <Button x:Name="CareerPreparation" Click="CareerPreparation_Click" Content="Career Preparation" HorizontalAlignment="Left" Height="52" Margin="348,422,0,0" VerticalAlignment="Top" Width="236" Background="#FF43B8FA" FontWeight="Bold" FontSize="24" Cursor="Arrow"/>
+        <Button x:Name="Logout" Click="Logout_Click" Content="Logout" HorizontalAlignment="Left" Height="43" Margin="1049,661,0,0" VerticalAlignment="Top" Width="108" FontSize="20" Cursor="Hand" FontWeight="Bold" Background="#FFC4E6F9"/>
 
         <!-- Main Content Area -->
 

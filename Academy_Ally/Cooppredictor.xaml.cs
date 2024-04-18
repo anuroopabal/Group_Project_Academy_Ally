@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,32 +58,68 @@ namespace Academy_Ally
                 else
                 {
                     Output.Background = Brushes.Yellow;
+
                     double[] marks = { subject1Mark, subject2Mark, subject3Mark, subject4Mark, subject5Mark };
                     double percentage = marks.Average();
-                    if (percentage >= 99)
+                    try
                     {
-                        Output.Text = "You are having 100% chances for Co-op.";
+                        string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                        SqlConnection connection = new SqlConnection(connectionString);
+                        string selectQuery = $"SELECT COUNT(*) from  AcademyAlly.dbo.Grades WHERE Email = '{CurrentUser.Username}'";
+                        connection.Open();
+                        SqlCommand cmd = new SqlCommand(selectQuery, connection);
+                        DataTable dt = new DataTable();
+                        SqlDataReader sdr = cmd.ExecuteReader();
+                        dt.Load(sdr);
+                        int count = (int)cmd.ExecuteScalar();
+                        string selectQuery2 = $"INSERT INTO AcademyAlly.dbo.Grades (Email, PROG8051, SENG8041, SENG8021, SENG8031, SENG8091) VALUES ('{CurrentUser.Username}', '{subject1Mark}', '{subject2Mark}', '{subject3Mark}', '{subject4Mark}', '{subject5Mark}')";
+                        string selectQuery1 = $"UPDATE AcademyAlly.dbo.Grades SET PROG8051 = '{subject1Mark}', SENG8041 = '{subject2Mark}', SENG8021 = '{subject3Mark}', SENG8031 = '{subject4Mark}', SENG8091 = '{subject5Mark}' WHERE Email = '{CurrentUser.Username}'";
+                        string selectQuery3 = $"SELECT COUNT(*) from  AcademyAlly.dbo.Grades WHERE AverageGrade > '{percentage}' and Email != '{CurrentUser.Username}'";
+                        string selectQuery4 = $"SELECT COUNT(*) from  AcademyAlly.dbo.Grades WHERE AverageGrade > '{percentage}'";
+                        int avGrade;
+                        if (count > 0)
+                        {
+                            SqlCommand cmd1 = new SqlCommand(selectQuery1, connection);
+                            DataTable dt1 = new DataTable();
+                            SqlDataReader sdr1 = cmd1.ExecuteReader();
+                            dt1.Load(sdr1);
+                            SqlCommand cmd3 = new SqlCommand(selectQuery3, connection);
+                            DataTable dt3 = new DataTable();
+                            SqlDataReader sdr3 = cmd3.ExecuteReader();
+                            dt3.Load(sdr3);
+                            avGrade = (int)cmd3.ExecuteScalar();
+                        }
+                        else
+                        {
+                            SqlCommand cmd2 = new SqlCommand(selectQuery2, connection);
+                            DataTable dt2 = new DataTable();
+                            SqlDataReader sdr2 = cmd2.ExecuteReader();
+                            dt2.Load(sdr2);
+                            SqlCommand cmd4 = new SqlCommand(selectQuery4, connection);
+                            DataTable dt4 = new DataTable();
+                            SqlDataReader sdr4 = cmd4.ExecuteReader();
+                            dt4.Load(sdr4);
+                            avGrade = (int)cmd4.ExecuteScalar();
+                        }
+                        connection.Close();
+                        if(avGrade >= 5)
+                        {
+                            Output.Text = "You are eligible for Co-op but no more seats left.";
+                        }
+                        else
+                        {
+                            CheckPercentage(percentage);
+                        }
                     }
-                    else if (percentage >= 95)
+                    catch (Exception ex)
                     {
-                        Output.Text = "You are having 75% chances for Co-op.";
+                        MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
                     }
-                    else if (percentage >= 90)
-                    {
-                        Output.Text = "You are having 50% chances for Co-op.";
-                    }
-                    else if (percentage >= 85)
-                    {
-                        Output.Text = "You are having 25% chances for Co-op.";
-                    }
-                    else if (percentage >= 80)
-                    {
-                        Output.Text = "You are eligible but only 5% chances for Co-op.";
-                    }
-                    else
-                    {
-                        Output.Text = "You are in-eligible for Co-op!";
-                    }
+
+
+                    
+                    
                 }
             }
             catch
@@ -120,6 +159,33 @@ namespace Academy_Ally
         {
             // Validate that the mark is within the range of 0 to 100
             return mark >= 0 && mark <= 100;
+        }
+        private void CheckPercentage(double percentage)
+        {
+            if (percentage >= 99)
+            {
+                Output.Text = "You are having 100% chances for Co-op.";
+            }
+            else if (percentage >= 95)
+            {
+                Output.Text = "You are having 75% chances for Co-op.";
+            }
+            else if (percentage >= 90)
+            {
+                Output.Text = "You are having 50% chances for Co-op.";
+            }
+            else if (percentage >= 85)
+            {
+                Output.Text = "You are having 25% chances for Co-op.";
+            }
+            else if (percentage >= 80)
+            {
+                Output.Text = "You are eligible but only 5% chances for Co-op.";
+            }
+            else
+            {
+                Output.Text = "You are in-eligible for Co-op!";
+            }
         }
     }
 }

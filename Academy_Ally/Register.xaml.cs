@@ -1,10 +1,12 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -43,23 +45,36 @@ namespace Academy_Ally
             string courseId = txtCourse.Text;
 
             // Check if any required fields are empty
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(contact))
             {
                 MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (!IsValidEmail(email))
+            {
+                MessageBox.Show("Please enter a valid email address.", "Invalid Email", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Validate phone number format
+            if (!IsValidPhoneNumber(contact))
+            {
+                MessageBox.Show("Please enter a valid phone number.", "Invalid Phone Number", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
             // Insert user data into database
             try
             {
-                /*SqlConnection connection = new SqlConnection(@"Data Source=Rooz;Initial Catalog = AcademyAlly; Integrated Security = True; Trust Server Certificate=True");
+                string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                SqlConnection connection = new SqlConnection(connectionString);
                 string insertQuery = $"INSERT INTO AcademyAlly.dbo.UserDetails(Email, Name, Password, Contact, Address, CourseID) VALUES ('{email}', '{name}', '{password}', '{contact}', '{address}', '{courseId}')";
                 SqlCommand cmd = new SqlCommand(insertQuery, connection);
                 DataTable dt = new DataTable();
                 connection.Open();
                 SqlDataReader sdr = cmd.ExecuteReader();
                 dt.Load(sdr);
-                connection.Close();*/
+                connection.Close();
                 MessageBox.Show("Registration successful.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
@@ -79,6 +94,20 @@ namespace Academy_Ally
             mainWindow.Show();
             //Close the current window
             Window.GetWindow(this)?.Close();
+        }
+        private bool IsValidEmail(string email)
+        {
+            // Regular expression pattern for validating email address
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            return Regex.IsMatch(email, pattern);
+        }
+
+        // Method to validate phone number using regular expression
+        private bool IsValidPhoneNumber(string phone)
+        {
+            // Regular expression pattern for validating phone number
+            string pattern = @"^\d{10}$"; // Assumes a 10-digit phone number
+            return Regex.IsMatch(phone, pattern);
         }
     }
 }
